@@ -8,11 +8,17 @@ switch ($request) {
         $redirect = '/views/main.php';
         break;
     case '/login':
-        $redirect = '/views/login.php';
+        $redirect = '/views/login.html';
+        break;
+    case '/login.php': 
+        $redirect = '/core/login.php';
         break;
 	case '/singup':
 		$redirect = '/views/singup.html';
 		break;
+    case '/singup.php': 
+        $redirect = '/core/singup.php';
+        break; 
     default:
         http_response_code(404);
         $redirect = '/views/404.php';
